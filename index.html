@@ -79,6 +79,56 @@
     <p>© 2026 Mufasa · Built with HTML, CSS &amp; JS</p>
   </footer>
 
+  <div class="games-dock">
+    <div class="tetris-widget" id="tetris-widget">
+      <button
+        type="button"
+        class="game-toggle"
+        id="tetris-toggle"
+        aria-expanded="false"
+        aria-controls="tetris-panel"
+        title="打开俄罗斯方块"
+      >
+        <span class="game-toggle-icon" aria-hidden="true">▣</span>
+        <span>方块</span>
+      </button>
+
+      <div class="game-panel tetris-panel" id="tetris-panel" role="dialog" aria-label="俄罗斯方块">
+        <div class="game-chrome">
+          <span class="game-title">TETRIS · 俄罗斯方块</span>
+          <button type="button" class="game-close" id="tetris-close" aria-label="关闭游戏">×</button>
+        </div>
+        <canvas id="tetris-canvas" width="200" height="400" tabindex="0"></canvas>
+        <p class="game-hint" id="tetris-hint">←→移动  ↑旋转  ↓加速  空格落定</p>
+      </div>
+    </div>
+
+    <div class="contra-widget" id="contra-widget">
+      <button
+        type="button"
+        class="game-toggle"
+        id="contra-toggle"
+        aria-expanded="false"
+        aria-controls="contra-panel"
+        title="打开魂斗罗"
+      >
+        <span class="game-toggle-icon" aria-hidden="true">▶</span>
+        <span>魂斗罗</span>
+      </button>
+
+      <div class="game-panel contra-panel" id="contra-panel" role="dialog" aria-label="魂斗罗小游戏">
+        <div class="game-chrome">
+          <span class="game-title">CONTRA · 魂斗罗</span>
+          <button type="button" class="game-close" id="contra-close" aria-label="关闭游戏">×</button>
+        </div>
+        <canvas id="contra-canvas" width="320" height="200" tabindex="0"></canvas>
+        <p class="game-hint" id="contra-hint">←→移动  ↑跳  ↓蹲  J射击</p>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script src="contra.js"></script>
+  <script src="tetris.js"></script>
 </body>
 </html>

@@ -171,7 +171,8 @@
   document.addEventListener("keydown", (event) => {
     if (
       document.getElementById("contra-panel")?.classList.contains("is-open") ||
-      document.getElementById("tetris-panel")?.classList.contains("is-open")
+      document.getElementById("tetris-panel")?.classList.contains("is-open") ||
+      document.getElementById("plane-panel")?.classList.contains("is-open")
     ) {
       return;
     }

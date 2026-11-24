@@ -374,12 +374,13 @@
     raf = requestAnimationFrame(loop);
   }
 
-  function closeContraIfOpen() {
+  function closeOthers() {
     if (window.__contraIsOpen?.()) window.__contraClose?.();
+    if (window.__planeIsOpen?.()) window.__planeClose?.();
   }
 
   function openPanel() {
-    closeContraIfOpen();
+    closeOthers();
     open = true;
     panel.classList.add("is-open");
     toggle.setAttribute("aria-expanded", "true");

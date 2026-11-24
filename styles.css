@@ -332,7 +332,8 @@ main,
 }
 
 .contra-widget,
-.tetris-widget {
+.tetris-widget,
+.plane-widget {
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
@@ -392,6 +393,10 @@ main,
   width: min(calc(100vw - 2rem), 220px);
 }
 
+.plane-panel {
+  width: min(calc(100vw - 2rem), 256px);
+}
+
 @keyframes game-pop {
   from {
     opacity: 0;
@@ -436,7 +441,8 @@ main,
 }
 
 #contra-canvas,
-#tetris-canvas {
+#tetris-canvas,
+#plane-canvas {
   display: block;
   width: 100%;
   height: auto;

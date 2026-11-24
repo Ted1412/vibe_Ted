@@ -68,12 +68,13 @@
     flash = 0;
   }
 
-  function closeTetrisIfOpen() {
+  function closeOthers() {
     if (window.__tetrisIsOpen?.()) window.__tetrisClose?.();
+    if (window.__planeIsOpen?.()) window.__planeClose?.();
   }
 
   function openPanel() {
-    closeTetrisIfOpen();
+    closeOthers();
     open = true;
     panel.classList.add("is-open");
     toggle.setAttribute("aria-expanded", "true");
